@@ -1,0 +1,12 @@
+  //=== variables
+  // $main-color: #521751; //in the map variable now
+  $sizeDefault: 1rem;
+  $sizeTiny: 0.2rem;
+  
+    //map variables 
+      // uses parentesis with key: value pairs 
+      // must be listed in order above its first use i.e., in the list variable below
+  $colors: ( main: #521751, secondary: #fa923f );
+  
+    //list variables
+  $border-default: 0.05rem solid map-get($colors, main);
