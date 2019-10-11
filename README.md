@@ -4,7 +4,7 @@
 ### Install with Node
 * npm install -g sass
 
-![SASS Features](readMeImage/Features.jpg)
+![SASS Features](readMeImage/Features)
 
 ### SASS/SCSS syntax
 * SASS removes brackets and semi-colons; indentation determines attribution to above element
