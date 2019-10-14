@@ -57,7 +57,7 @@ body {
 
 .sass-introduction {
   // ======================= @extend builds inheritance
-  @extend .sass-section
+  @extend .sass-section;
 
   box-shadow: $sizeTiny $sizeTiny $sizeTiny / 2 #ccc; // more Arithmetic: $sizeTiny / 2, instead of 0.1rem
 
@@ -68,7 +68,7 @@ body {
 }
 
 .sass-details {
-  @extend .sass-section
+  @extend .sass-section;
   margin: $sizeDefault * 2 0;
 }
 
