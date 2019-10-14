@@ -4,6 +4,11 @@
 
 html {
   font-size: 94.75%;
+
+  // ==== add media queries straight into elements and classes
+  @media (min-width: 40rem) {
+      font-size: 125%;
+    }
 }
 
 body {
@@ -35,34 +40,36 @@ body {
   box-sizing: border-box;
 }
 
-.sass-introduction {
+.sass-section {
   border: $border-default;
-
-    // ==== Using Color Module ... helpful when working with color variables to make gradients consistent with reusable colors
-  background: lighten(map-get($colors, main), 70%);
-
   padding: 2rem;
   text-align: center;
-  box-shadow: $sizeTiny $sizeTiny $sizeTiny / 2 #ccc; // more Arithmetic: $sizeTiny / 2, instead of 0.1rem
   width: 90%;
   box-sizing: border-box;
 
-  // ==== Nested links
+  // ==== Using Color Module ... helpful when working with color variables to make gradients consistent with reusable colors
+  background: lighten(map-get($colors, main), 70%);
 
+  @media (min-width: 40rem) {
+    width: 30rem;
+  }
+}
+
+.sass-introduction {
+  // ======================= @extend builds inheritance
+  @extend .sass-section
+
+  box-shadow: $sizeTiny $sizeTiny $sizeTiny / 2 #ccc; // more Arithmetic: $sizeTiny / 2, instead of 0.1rem
+
+  // ==== Nested links
   p {
     margin: 0;
   }
 }
 
-
 .sass-details {
-  border: $border-default;
-  background: lighten(map-get($colors, main), 70%); // using color module again
-  padding: $sizeDefault;
-  text-align: center;
-  margin: 2rem 0;
-  width: 90%;
-  box-sizing: border-box;
+  @extend .sass-section
+  margin: $sizeDefault * 2 0;
 }
 
 .section-header {
@@ -107,14 +114,14 @@ body {
 }
 
 
+// =================================== Old Media Query
+// @media (min-width: 40rem) {
+//   html {
+//     font-size: 125%;
+//   }
 
-@media (min-width: 40rem) {
-  html {
-    font-size: 125%;
-  }
-
-  .sass-introduction,
-  .sass-details {
-    width: 30rem;
-  }
-}
+//   .sass-introduction,
+//   .sass-details {
+//     width: 30rem;
+//   }
+// }

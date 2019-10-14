@@ -17,6 +17,9 @@
     * once created, you can type in a command to watch for changes to constantly update our new .css file:
         *  $ sass --watch main.scss:main.css
 
-## Not related, but helpful with colors
+## Working With Colors
+* Sass color Modules:
+    * https://sass-lang.com/documentation/modules/color
+* Non-SASS color tools and Extenstions
     * Adobe Capture for mobile
     * ColorPick Eyedropper Google Chrome Extenstion for Desktop
