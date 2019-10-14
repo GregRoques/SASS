@@ -2,13 +2,31 @@
 
 @import "typography.scss";
 
+// =============================== a mixin ... implemented in classes using @include
+@mixin display-flex() { 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin media-min-width($width){
+  @media (min-width: $width) {
+      @content;
+    }
+}
+
 html {
   font-size: 94.75%;
 
   // ==== add media queries straight into elements and classes
-  @media (min-width: 40rem) {
-      font-size: 125%;
-    }
+  // @media (min-width: 40rem) {
+  //     font-size: 125%;
+  //   }
+
+  @include media-min-width(40rem){
+    font-size: 125%; // this imports into the @content part of the mixin
+  }
 }
 
 body {
@@ -17,10 +35,7 @@ body {
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+ @include display-flex(); // ================= including a mixin
 
   // === Nested Properties
 
@@ -85,9 +100,7 @@ body {
   margin: $sizeDefault 0 0 0;
   padding: 0;
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+  @include display-flex();
   flex-direction: column;
 
   // ==== Nested links

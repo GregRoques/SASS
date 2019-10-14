@@ -23,3 +23,29 @@
 * Non-SASS color tools and Extenstions
     * Adobe Capture for mobile
     * ColorPick Eyedropper Google Chrome Extenstion for Desktop
+
+# With React
+* https://www.w3schools.com/react/react_sass.asp
+
+Install Sass by running this command in your terminal:
+
+```
+C:\Users\Your Name>npm install node-sass
+```
+
+Import the Sass file the same way as you imported a CSS file:
+
+* Example:
+
+    ```
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+    import styles from './mysass.scss';
+        // can also do: import './mysass.scss';
+    ```
+    ```
+    <button
+        className={styles.btn}
+        onClick={() => alert('I am styled with CSS Modules')}
+    > I am a Button </button>
+    ```
