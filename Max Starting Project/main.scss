@@ -89,10 +89,10 @@ body {
 
 .section-header {
   border-bottom: $border-default;
-}
-
-.section-header h1 {
-  margin: 0 0 $sizeDefault 0;
+  
+  h1 {
+    margin: 0 0 $sizeDefault 0;
+  }
 }
 
 .documentation-links {
@@ -116,14 +116,16 @@ body {
     display: block;
     padding: $sizeTiny;
     border: $border-default;
-  }
 
-  .documentation-link:hover,
-  .documentation-link:active {
-    color: white;
-    background: map-get($colors, secondary);
-    border-color: map-get($colors, secondary);
-  }
+    // ====================== adding connectors with the ampersand sign...so much nicer
+    &:hover,
+    &:active {
+      color: white;
+      background: map-get($colors, secondary);
+      border-color: map-get($colors, secondary);
+    }
+  } 
+
 }
 
 
